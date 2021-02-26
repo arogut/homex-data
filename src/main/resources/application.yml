@@ -1,0 +1,45 @@
+server:
+  port: 8080
+  error:
+    includeBindingErrors: ALWAYS
+
+spring:
+  profiles:
+    active: dev
+  datasource:
+    url: "jdbc:postgresql://postgres/test"
+    username: ${DB_USER:admin}
+    password: ${DB_PASSWORD:admin}
+    driverClassName: org.postgresql.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQL95Dialect
+    hibernate:
+      ddl-auto: create
+    show-sql: false
+  jackson:
+    serialization:
+      indent_output: true
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  security:
+    user:
+      name: admin
+      password: "{noop}admin"
+
+jwt:
+  expiration: 600000
+  secret: 3FC5D3C8D03FC2AC2AC3BB0BA2CEB2B33C258CED644FC5798AB6960CAFBAD0A6
+
+influx:
+  url: http://influxdb:8086
+  user: admin
+  password: admin
+  database: measurement
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health, info

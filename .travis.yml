@@ -1,0 +1,8 @@
+language: java
+jdk:
+  - oraclejdk11
+sudo: false
+script: mvn clean verify
+
+after_success:
+  - bash <(curl -s https://codecov.io/bash) -t a00c4d12-594b-4ddc-ad5a-1b9fc85f0a01
