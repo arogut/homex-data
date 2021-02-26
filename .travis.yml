@@ -3,6 +3,3 @@ jdk:
   - oraclejdk11
 sudo: false
 script: mvn clean verify
-
-after_success:
-  - bash <(curl -s https://codecov.io/bash) -t ff7b281a-b334-490d-9514-056c4a37d39c

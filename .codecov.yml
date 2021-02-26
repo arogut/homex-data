@@ -1,8 +1,0 @@
-coverage:
-  status:
-    patch: off
-    project:
-      homex-data:
-        paths:
-          - "./"
-        target: 85%
