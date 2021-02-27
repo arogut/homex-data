@@ -45,4 +45,4 @@ jobs:
         with:
           java-version: 11
       - name: Build and analyze
-        run: mvn compile jib:build -Djib.to.auth.username=${{ secrets.DOCKER_USERNAME }} -Djib.to.auth.password=${{ secrets.DOCKER_USERNAME }}
+        run: mvn -q compile jib:build -Djib.to.auth.username=${{ secrets.DOCKER_USERNAME }} -Djib.to.auth.password=${{ secrets.DOCKER_PASSWORD }}
