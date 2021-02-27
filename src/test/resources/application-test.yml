@@ -1,13 +1,11 @@
 spring:
-  profiles:
-    active: dev
   datasource:
     url: "jdbc:h2:mem:${DB_NAME:test}"
     username: ${DB_USER:admin}
     password: ${DB_PASSWORD:admin}
     driverClassName: org.h2.Driver
   jpa:
-    database-platform: org.hibernate.dialect.PostgreSQL94Dialect
+    database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: create
     show-sql: false

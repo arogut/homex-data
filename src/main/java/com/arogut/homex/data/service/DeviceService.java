@@ -4,7 +4,6 @@ import com.arogut.homex.data.dao.DeviceEntity;
 import com.arogut.homex.data.dao.DeviceRepository;
 import com.arogut.homex.data.dao.JpaChild;
 import com.arogut.homex.data.mapper.DeviceMapper;
-import com.arogut.homex.data.model.Contract;
 import com.arogut.homex.data.model.Device;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
